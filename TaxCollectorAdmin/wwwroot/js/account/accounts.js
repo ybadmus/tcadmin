@@ -12,8 +12,8 @@ var initializeKendoGrid = function (data, stage) {
 
     $("#grid").kendoGrid({
         dataSource: { data: data, pageSize: 8 },
-        sortable: true,
-        selectable: true,
+        sortable: false,
+        selectable: false,
         pageable: { refresh: false, pageSizes: true, buttonCount: 5 },
         columns: [
             { field: "dateCreated", title: "Date", width: '90px' },

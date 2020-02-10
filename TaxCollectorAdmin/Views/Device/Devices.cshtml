@@ -4,20 +4,18 @@
 }
 
 @section css {
-<link href="~/css/device/device.css" rel="stylesheet" />
+    <link href="~/css/device/device.css" rel="stylesheet" />
 }
-
-<h1>Devices</h1>
 
 <div class="card">
 
-    <div id="tccGridView">
+    <div id="devGridView">
         <div class="card-header">
             <div class="row">
-                <div class="col-sm-3" id="">
-                    <select type="text" id="listOfAssemblies" class="form-control" required></select>
+                <div class="col-sm-4" id="">
+                    <input type="text" id="deviceName" class="form-control" placeholder="Use * or Device Name" />
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <button type="button" id="btnSearch" class="btn btn-success btn-sm"><i class='fa fa-search'></i> Search</button>
                 </div>
             </div>
@@ -30,9 +28,9 @@
             </div>
         </div>
     </div>
-
 </div>
 
-@section script{ 
+
+@section scripts {
     <script src="~/js/devices/devices.js"></script>
 }
