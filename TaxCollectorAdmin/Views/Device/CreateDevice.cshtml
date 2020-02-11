@@ -8,6 +8,66 @@
     <link href="~/css/device/createDevice.css" rel="stylesheet" />
 }
 
-@section scripts { 
+<div class="col-sm-10 offset-sm-1">
+    <div class="card">
+        <div class="card-body">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="taxPosition" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                    <div class="form-horizontal">
+                        <div class="form-row">
+                            <div class="col-sm-7" style="margin-left: auto; margin-right: auto">
+
+                                <div class="bordereds-group tabcontent" id="generalInfo" style="height: 300px">
+                                    <div class="">
+                                        <form>
+                                            <div class="form-group row">
+                                                <div class="col-md-6 formDiv">
+                                                    <label for="Description" class=" col-form-label">User Name</label>
+                                                    <input type="text" class="form-control" id="Description" placeholder="">
+                                                </div>
+                                                <div class="col-md-6 formDiv">
+                                                    <label for="Description" class=" col-form-label">IME № </label>
+                                                    <input type="text" class="form-control" id="Description" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-6 formDiv">
+                                                    <label for="Description" class=" col-form-label">Brand</label>
+                                                    <input type="text" class="form-control" id="Description" placeholder="">
+                                                </div>
+                                                <div class="col-md-6 formDiv">
+                                                    <label for="Description" class=" col-form-label">Model</label>
+                                                    <input type="text" class="form-control" id="Description" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-12 formDiv">
+                                                    <label for="Description" class=" col-form-label">Assembly Name</label>
+                                                    <select class="form-control" id="description"></select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-6 formDiv">
+                                                    <label for="Description" class=" col-form-label">Date Created</label>
+                                                    <input type="text" class="form-control" id="Description" placeholder="">
+                                                </div>                                                
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <button id="saveContinueBtn" style="float: right; margin-left: 2px;" class="btn btn-success">  Save </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section scripts {
     <script src="~/js/devices/createDevice.js"></script>
 }
