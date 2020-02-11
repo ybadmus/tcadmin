@@ -1,4 +1,4 @@
-﻿var HeaderName = "Accounts";
+﻿var HeaderName = "Devices";
 
 $(document).ready(function () {
     $("#pgHeader").text(HeaderName);
@@ -16,10 +16,10 @@ var initializeKendoGrid = function (data, stage) {
         selectable: false,
         pageable: { refresh: false, pageSizes: true, buttonCount: 5 },
         columns: [
-            { field: "dateCreated", title: "Date", width: '90px' },
-            { field: "accountName", title: "Assembly", width: '30%' },
-            { field: "region", title: "Region", width: '15%' },
-            { field: "district", title: "District", width: '25%' },
+            { field: "dCreateDate", title: "Date", width: '90px' },
+            { field: "szUserName", title: "User Name", width: '25%' },
+            { field: "assemblyName", title: "Assembly", width: '30%' },
+            { field: "szBrand", title: "Brand", width: '15%' },
             {
                 command: [{
                     name: "view",
@@ -31,3 +31,11 @@ var initializeKendoGrid = function (data, stage) {
         ]
     });
 };
+
+//var dummyArray = [{
+//    "dCreateDate": "20/2/2020",
+//    "szUserName": "Yusif Badmus",
+//    "assemblyName": "Ablekumah",
+//    "szBrand": "Huawei",
+
+//}];

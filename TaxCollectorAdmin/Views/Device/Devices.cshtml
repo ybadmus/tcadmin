@@ -3,5 +3,34 @@
     ViewData["Title"] = "Devices";
 }
 
-<h1>Devices</h1>
+@section css {
+    <link href="~/css/device/device.css" rel="stylesheet" />
+}
 
+<div class="card">
+
+    <div id="devGridView">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-sm-4" id="">
+                    <input type="text" id="deviceName" class="form-control" placeholder="Use * or Device Name" />
+                </div>
+                <div class="col-sm-2">
+                    <button type="button" id="btnSearch" class="btn btn-success btn-sm"><i class='fa fa-search'></i> Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row align-items-end" style="margin: 1px;">
+                <div class="gridDiv">
+                    <div id="grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+    <script src="~/js/devices/devices.js"></script>
+}
