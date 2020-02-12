@@ -15,13 +15,19 @@
                 <div class="tab-pane fade show active" id="taxPosition" role="tabpanel" aria-labelledby="nav-profile-tab">
 
                     <div class="form-horizontal">
-                        <div style="text-align: center;"><h5>Create Device for an Assembly</h5></div>
+                        <div style="text-align: center;"><h6>Create a Device for an Assembly</h6></div>
                         <div class="form-row">
                             <div class="col-sm-7" style="margin-left: auto; margin-right: auto">
 
                                 <div class="bordereds-group tabcontent" id="generalInfo" style="height: 300px">
                                     <div class="">
                                         <form>
+                                            <div class="form-group row">
+                                                <div class="col-md-12 formDiv">
+                                                    <label for="Description" class=" col-form-label">Assembly Name</label>
+                                                    <select class="form-control" id="assemblyName"></select>
+                                                </div>
+                                            </div>
                                             <div class="form-group row">
                                                 <div class="col-md-6 formDiv">
                                                     <label for="Description" class=" col-form-label">User Name</label>
@@ -43,16 +49,10 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <div class="col-md-12 formDiv">
-                                                    <label for="Description" class=" col-form-label">Assembly Name</label>
-                                                    <select class="form-control" id="assemblyName"></select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
                                                 <div class="col-md-6 formDiv">
                                                     <label for="Description" class=" col-form-label">Date Created</label>
                                                     <input type="text" class="form-control" id="dCreateDate" placeholder="">
-                                                </div>                                                
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
