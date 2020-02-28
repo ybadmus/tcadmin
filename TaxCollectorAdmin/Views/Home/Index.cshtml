@@ -2,7 +2,12 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="card">
+   <div class="breadcrumb">
+        <iframe src='http://collect.localrevenue-gh.com/bi/en-us/site/site1/dashboards/5a5b7b4c-a2a9-4075-a2de-ffa5bba6b013/Predictive%20Analytics/Personal%20Expense%20Analysis?isembed=true' id='dashboard-frame' width='1240' height='565' allowfullscreen frameborder='0'></iframe>
+    </div>
 </div>
+
+@section scripts {
+    <script src="~/js/Home/home.js"></script>
+}
