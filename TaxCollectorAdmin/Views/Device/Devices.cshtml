@@ -1,20 +1,19 @@
 ﻿
 @{
-    ViewData["Title"] = "Accounts";
+    ViewData["Title"] = "Devices";
 }
 
 @section css {
-    <link href="~/css/account/accounts.css" rel="stylesheet" />
+    <link href="~/css/device/device.css" rel="stylesheet" />
 }
-
 
 <div class="card">
 
-    <div id="tccGridView">
+    <div id="devGridView">
         <div class="card-header">
             <div class="row">
                 <div class="col-sm-4" id="">
-                    <input type="text" id="assemblyName" class="form-control" placeholder="Use * or Assembly Name" />
+                    <input type="text" id="deviceName" class="form-control" placeholder="Use * or Device Name" />
                 </div>
                 <div class="col-sm-2">
                     <button type="button" id="btnSearch" class="btn btn-success btn-sm"><i class='fa fa-search'></i> Search</button>
@@ -29,10 +28,9 @@
             </div>
         </div>
     </div>
-
 </div>
 
-@section scripts {
-    <script src="~/js/account/accounts.js"></script>
-}
 
+@section scripts {
+    <script src="~/js/devices/devices.js"></script>
+}
