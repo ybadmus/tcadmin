@@ -6,14 +6,16 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace TaxCollectorAdmin.Helpers
+namespace TaxCollectorAdmin.Helper
 {
     public static class AuthenticationServiceExtension
     {
         public static IServiceCollection AddAuthenticationConfiguration(this IServiceCollection services, IConfiguration config)
         {
-            //This is how we pull things from appsettings on Startup 
             var idpSettings = Startup.StaticConfig.GetSection("APPCONSTANTS");
 
             var apiUrl = idpSettings["ApiUrl"];
@@ -30,7 +32,7 @@ namespace TaxCollectorAdmin.Helpers
             .AddCookie(options =>
             {
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
-                options.Cookie.Name = "mvcHybridITAPSHOST";
+                options.Cookie.Name = "mvcHybridTaxAdmin";
             })
             .AddAutomaticTokenManagement()
             .AddOpenIdConnect("oidc", options =>
@@ -40,15 +42,13 @@ namespace TaxCollectorAdmin.Helpers
                 options.ClientSecret = clientSecret;
                 options.ClientId = clientId;
                 options.CallbackPath = "/signin-oidc";
-                //options.SignedOutCallbackPath = "";
-                options.ResponseType = "code id_token";
+                options.ResponseType = "code";
                 options.UseTokenLifetime = true;
-                //options.CorrelationCookie = 
                 options.Scope.Clear();
                 options.Scope.Add("openid");
                 options.Scope.Add("profile");
-                options.Scope.Add("phone");
-                options.Scope.Add("admin");
+                options.Scope.Add("email");
+                options.Scope.Add("collectorapi");
                 options.Scope.Add("offline_access");
 
                 options.ClaimActions.MapAllExcept("iss", "nbf", "exp", "aud", "nonce", "iat", "c_hash");
